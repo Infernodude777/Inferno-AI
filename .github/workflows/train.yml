@@ -7,8 +7,7 @@ on:
     branches: [ main ]
   schedule:
     # Run daily at 2 AM UTC for continuous training
-    - cron: '0 2 * * *'
-  workflow_dispatch: # Allow manual triggers
+    - cron: '*/5 * * * *'  # Run every 5 minutes (minimum allowed by GitHub)upload-artifact@v3  upload-artifact@v4  workflow_dispatch: # Allow manual triggers
 
 jobs:
   train:
